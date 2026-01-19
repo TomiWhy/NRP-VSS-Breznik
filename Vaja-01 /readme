@@ -1,47 +1,65 @@
-# Delovni naslov produkta
-**SubReminder – spletni upravljalnik naročnin z opozorili**
+# SubReminder
+### Spletni upravljalnik naročnin z e-mail in spletnimi opozorili
+
+SubReminder je spletna aplikacija, ki uporabnikom omogoča pregledno spremljanje vseh naročniških storitev na enem mestu ter pravočasna opozorila pred samodejnimi obnovitvami.
 
 ---
 
-## 1. Opis problema
+## Problem
 
-V digitalni dobi ima povprečen uporabnik sklenjenih več naročniških storitev, kot so pretočne platforme, spletna orodja, mobilne aplikacije, oblačne storitve in različna članstva. Večina teh storitev se samodejno obnavlja, kar pogosto povzroči, da uporabniki izgubijo pregled nad aktivnimi naročninami in stroški.
+V sodobnem digitalnem okolju ima povprečen uporabnik sklenjenih več naročniških storitev, kot so:
+- pretočne platforme,
+- spletna orodja,
+- mobilne aplikacije,
+- oblačne storitve in članarine.
 
-Problem zadeva širok krog uporabnikov, predvsem posameznike, ki redno uporabljajo spletne storitve, vendar nimajo centralnega pregleda nad naročninami. Uporabniki pogosto pozabijo na datume obnovitve ali konec brezplačnih preizkusnih obdobij, kar vodi v nepričakovane stroške.
+Ker se večina naročnin samodejno obnavlja, uporabniki pogosto:
+- izgubijo pregled nad aktivnimi naročninami,
+- pozabijo na datume obnovitve ali konec brezplačnih preizkusnih obdobij,
+- plačujejo za storitve, ki jih ne uporabljajo več.
 
-Problem je pomemben, ker povzroča nepotrebno porabo denarja, zmanjšuje nadzor nad osebnimi financami ter ustvarja stres in nezaupanje do naročniških modelov, ki so sicer zelo razširjeni.
+To vodi v nepričakovane stroške, občutek izgube nadzora nad osebnimi financami ter t. i. *subscription fatigue*.
 
 ---
 
-## 2. Ciljni uporabnik
+## Ciljni uporabnik
 
-Ciljni uporabnik je vsakdanji spletni uporabnik, star med 18 in 40 let, ki uporablja več spletnih in mobilnih naročniških storitev. Uporabnik večino svojih opravil opravlja prek spleta, uporablja e-pošto in je vajen prejemanja digitalnih obvestil.
+Ciljni uporabnik je vsakdanji spletni uporabnik, star med **18 in 40 let**, ki redno uporablja več naročniških storitev.
 
-V praksi se sooča z naslednjimi težavami:
-- nima enotnega pregleda nad vsemi naročninami,
+**Značilnosti uporabnika:**
+- večino opravil opravlja prek spleta,
+- uporablja e-pošto in spletne aplikacije,
+- želi enostaven in pregleden način spremljanja stroškov.
+
+**Glavne težave v praksi:**
+- nima enotnega pregleda nad naročninami,
 - ne spremlja redno datumov obnovitve,
-- spregleda e-poštna obvestila posameznih ponudnikov,
-- ne ve, koliko denarja mesečno porabi za naročniške storitve.
+- spregleda opozorila posameznih ponudnikov,
+- ne ve, koliko denarja mesečno porabi za naročnine.
 
 ---
 
-## 3. Predlagana rešitev (osnovna ideja)
+## Predlagana rešitev
 
-Predlagana rešitev je spletna stran, ki uporabniku omogoča, da na enem mestu upravlja vse svoje naročnine. Uporabnik ročno vnese podatke o posamezni naročnini, spletna aplikacija pa na podlagi teh podatkov omogoča pregled stroškov ter samodejno pošilja obvestila.
+SubReminder je spletna stran, ki uporabniku omogoča centralizirano upravljanje vseh naročnin na enem mestu.
 
-Spletna stran pošilja:
-- e-mail opozorila pred obnovitvijo naročnine,
-- spletne (in-app) notifikacije ob bližajočih se plačilih ali koncu preizkusnega obdobja.
+**Osnovne funkcionalnosti:**
+- ročni vnos naročnin (ime, cena, interval, datum obnovitve),
+- pregled mesečnih in letnih stroškov,
+- samodejna opozorila pred obnovitvami.
 
-Rešitev je boljša od obstoječih alternativ, ker ne zahteva povezave z bančnimi računi, kar povečuje zasebnost, hkrati pa uporabniku ponuja centraliziran in pregleden sistem opozarjanja, ki preprečuje neprijetna presenečenja.
+**Načini obveščanja:**
+- e-mail opozorila,
+- spletne (in-app) notifikacije.
 
----
-
-## 4. Primer uporabe (kratek scenarij)
-
-Marko uporablja več spletnih naročnin, med drugim pretočno platformo, orodje za delo in spletno učno platformo. Na spletni strani SubReminder ustvari uporabniški račun in vnese vse svoje naročnine skupaj z zneski in datumi obnovitve.
-
-Teden dni pred obnovitvijo ene izmed naročnin Marko prejme e-mail opozorilo in spletno notifikacijo ob prijavi v aplikacijo. Po pregledu ugotovi, da storitve ne uporablja več, zato jo pravočasno prekliče in se izogne dodatnemu strošku.
+Rešitev je zasnovana kot **preprosta in zasebna alternativa** obstoječim aplikacijam, saj ne zahteva povezave z bančnimi računi in daje uporabniku popoln nadzor nad podatki.
 
 ---
 
+## Primer uporabe
+
+Marko uporablja več spletnih naročnin, med drugim pretočno platformo, orodje za delo in spletno učno platformo. Na strani SubReminder ustvari uporabniški račun in vnese podatke o vseh svojih naročninah.
+
+Teden dni pred obnovitvijo ene izmed naročnin prejme e-mail opozorilo in spletno obvestilo ob prijavi v aplikacijo. Ker ugotovi, da storitve ne uporablja več, jo pravočasno prekliče in se izogne dodatnemu strošku.
+
+---
