@@ -103,51 +103,32 @@ Ko ugotovi, da ene storitve ne uporablja več, jo označi kot nepotrebno. Ker je
 
 ---
 
-## 6. Monetizacija
+## Monetizacija – success-based model
 
-SubReminder uporablja kombinacijo **freemium modela**, **plačljive premium naročnine** in **plačila na uspeh**, kar omogoča pravično in tržno utemeljeno monetizacijo.
+SubReminder uporablja izključno **plačilo na uspeh (success-based pricing)**. Uporabniki plačajo samo v primeru, da je zahteva za vračilo kupnine ali preklic naročnine uspešno izvedena.
 
-### Freemium in Premium naročnina
-Aplikacija temelji na freemium pristopu, kjer je osnovna uporaba brezplačna, napredne funkcionalnosti pa so na voljo v premium paketu.
+### Kako deluje
+- uporabnik sproži zahtevo za refund ali preklic,
+- SubReminder pomaga z avtomatsko pripravo in pošiljanjem komunikacije,
+- provizija se zaračuna **samo ob dejansko povrnjenem znesku**.
 
-- **Brezplačna različica (Free)**
-  - omejeno število naročnin,
-  - osnovni pregled stroškov,
-  - e-mail opozorila pred obnovitvami.
+### Progresivna cenovna lestvica
 
-- **Premium naročnina**
-  - cena: približno **6–12 USD na mesec** (primerljivo s konkurenco, npr. Rocket Money),
-  - neomejeno število naročnin,
-  - napredna analitika porabe (mesečni trendi, kategorije),
-  - pomoč pri preklicu naročnin in zahtevah za vračilo,
-  - priporočila za brezplačne ali cenejše alternative aplikacij,
-  - možnost brezplačnega preizkusnega obdobja.
+| Refundirani znesek | Provizija |
+|-------------------|-----------|
+| do 20 USD         | 35 % |
+| 20 – 50 USD       | 25 % |
+| 50 – 150 USD      | 15 % |
+| 150 – 300 USD     | 10 % |
+| nad 300 USD       | 5 % |
 
-### Plačilo na uspeh (success fee)
-Za napredno pomoč pri vračilih kupnine SubReminder uporablja model **plačila na uspeh**:
+### Prednosti modela
+- brez mesečnih naročnin,
+- brez tveganja za uporabnika,
+- transparentna in pravična struktura,
+- močna motivacija za uspešno izvedbo zahtevkov.
 
-- ob uspešno izvedeni refundaciji se zaračuna **10–20 % povrnjenega zneska**,
-- uporabnik plača le v primeru dejanskega uspeha,
-- model je transparenten in uporabniku prijazen.
-
-Ta pristop je konkurenčen obstoječim storitvam, ki pogosto zaračunavajo bistveno višje deleže pri doseženih prihrankih.
-
-### Enkratni »lifetime« premium paket
-Za uporabnike, ki ne želijo mesečnih naročnin, SubReminder ponuja tudi možnost **enkratnega plačila (lifetime access)**:
-
-- enkratno plačilo v razponu **79–129 USD**,
-- neomejen dostop do vseh premium funkcionalnosti,
-- brez ponavljajočih se stroškov.
-
-Ta možnost je priljubljena pri produktivnih orodjih in predstavlja dodaten vir prihodkov brez povečevanja kompleksnosti sistema.
-
----
-
-## 7. Konkurenca
-
-Na trgu že obstajajo rešitve, kot so Rocket Money, Truebill, Bobby in DoNotPay. Večina teh orodij omogoča spremljanje naročnin, vendar pogosto zahteva povezavo z bančnimi računi.
-
-SubReminder se razlikuje kot **lahka spletna aplikacija**, ki združuje ročni vnos naročnin, pregledno analitiko, aktivno pomoč pri preklicu naročnin ter priporočila za brezplačne ali cenejše alternative – brez zapletenih finančnih integracij.
+Model je primeren za skaliranje, saj so stroški avtomatizirane komunikacije nizki, vrednost uspešnih zahtevkov pa visoka.
 
 ---
 
