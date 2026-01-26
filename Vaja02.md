@@ -67,3 +67,34 @@ pri čemer plačajo le v primeru dejanskega uspeha.
 Za razliko od obstoječih rešitev (npr. Rocket Money, Truebill ali DoNotPay),  
 ki pogosto zahtevajo povezavo z bančnimi računi ali mesečno naročnino,  
 SubReminder ponuja zasebno, transparentno in rezultatno usmerjeno rešitev brez stalnih stroškov.
+
+## 3.1 Business Model Canvas (osredotočeni 4 elementi)
+
+| Element | Opis |
+|-------|------|
+| **Customer Segments** | **Uporabniki:** posamezniki (18–40 let), ki uporabljajo več digitalnih naročnin (SaaS, aplikacije, pretočne storitve) in želijo nadzor nad stroški.<br>**Plačnik:** končni uporabnik (plačilo samo ob uspešno izvedenem refundu). |
+| **Value Proposition** | Pregleden nadzor nad naročninami, pravočasna opozorila ter **enostavna pomoč pri preklicu in vračilu kupnine**, brez mesečne naročnine in brez povezave z bančnimi računi. Uporabnik plača **samo v primeru dejanskega uspeha**. |
+| **Revenue Streams** | - **Success-based provizija** ob uspešno refundirani naročnini (progresivna lestvica):<br> • do 20 USD → 35 %<br> • 20–50 USD → 25 %<br> • 50–150 USD → 15 %<br> • 150–300 USD → 10 %<br> • nad 300 USD → 5 % |
+| **Cost Structure** | - AI obdelava (generiranje e-mailov in follow-upov)<br>- Cloud infrastruktura (backend, e-mail storitve)<br>- Razvoj in vzdrževanje spletne aplikacije<br>- Osnovni marketing (SEO, referral, content)<br>- Podpora uporabnikom (minimalna, asinhrona) |
+
+### Ključno ekonomsko vprašanje
+Če uporabnik z uspešnim refundom povrne npr. **60 USD**, je provizija **10–15 %** zanemarljiva v primerjavi s prihrankom. Ker so stroški AI in infrastrukture zelo nizki, je model finančno vzdržen že pri manjšem številu uspešnih zahtevkov.
+
+---
+
+## 3.2 Ključne poslovne hipoteze (top 4)
+
+**Uporabniki so pripravljeni deliti 5–35 % refundiranega zneska, če sami ne bi zahtevali vračila.**  
+→ *Test:* landing page z jasno razloženo success-based ceno + simulacija prihranka.
+
+**Največja bolečina uporabnikov je pomanjkanje časa in volje za komunikacijo s podporo ponudnikov.**  
+→ *Test:* kratki intervjuji + anketa (rangiranje bolečin: pozabljena naročnina vs. refund postopek).
+
+**Uporabniki bodo zaupali orodju, če ne zahteva povezave z bančnimi računi.**  
+→ *Test:* A/B test komunikacije (»no bank access« vs. nevtralna razlaga).
+
+**Večina vrednosti nastane pri majhnem številu, a visoko vrednih refundov.**  
+→ *Test:* beta test z 50–100 uporabniki, merjenje povprečnega refund zneska in success rate.
+
+---
+
