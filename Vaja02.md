@@ -1,6 +1,9 @@
 ## 2.1 Value Proposition Canvas (VPC)
+<img width="1920" height="1080" alt="White and Purple Modern Value Proposition Canvas Whiteboard" src="https://github.com/user-attachments/assets/cdbe456a-68fc-4efb-ac3b-f779939c2e6a" />
+
 
 ### Customer Profile (Profil uporabnika)
+
 
 **Izbrani segment (EN sam):**  
 Posamezniki, stari med 18 in 40 let, ki uporabljajo več digitalnih naročniških storitev (SaaS, aplikacije, pretočne platforme) in želijo boljši nadzor nad ponavljajočimi se stroški.
