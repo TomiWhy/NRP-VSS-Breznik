@@ -1,0 +1,315 @@
+<html class="light" lang="en"><head></head><body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased transition-colors duration-200">```html
+
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SubReminder | Success-Based Subscription Recovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b6cee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style class="material-symbols-outlined"></style>
+
+
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-xl">account_balance_wallet</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">SubReminder</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#how-it-works">How It Works</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#pricing">Pricing</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#privacy">Privacy</a>
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all">Sign In</button>
+</div>
+<div class="md:hidden">
+<span class="material-icons cursor-pointer">menu</span>
+</div>
+</div>
+</div>
+</nav>
+<header class="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-6">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+            No bank connection required
+        </div>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+            Get Your Money Back From <br/>
+<span class="text-primary">Unwanted Subscriptions</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10">
+            We scan your receipts, find forgotten renewals, and help you get refunds. <strong>Pay nothing upfront.</strong> We only take a small fee if we successfully save you money.
+        </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all text-lg">
+                Track My Subscriptions Free
+            </button>
+<div class="flex items-center gap-6 mt-4 sm:mt-0 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-green-500 font-bold">check_circle</span>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-400">No bank connection</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-green-500 font-bold">check_circle</span>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-400">Pay only on success</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="py-24 bg-white dark:bg-slate-900" id="pricing">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">No subscription. No upfront cost.</h2>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+                Stop paying for management apps. We only get paid when you do. If we don't recover money for you, our service is 100% free.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+<div class="relative p-8 bg-background-light dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700">
+<div class="absolute -top-4 left-8 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+<div class="mb-4 text-primary">
+<span class="material-symbols-outlined text-4xl">search_check</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Track</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Securely upload your digital receipts. No bank login needed. We identify every recurring charge.</p>
+</div>
+<div class="relative p-8 bg-background-light dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700">
+<div class="absolute -top-4 left-8 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+<div class="mb-4 text-primary">
+<span class="material-symbols-outlined text-4xl">assignment_return</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Refund</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">We find unused services and initiate refund requests or cancellations on your behalf.</p>
+</div>
+<div class="relative p-8 bg-background-light dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700">
+<div class="absolute -top-4 left-8 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+<div class="mb-4 text-primary">
+<span class="material-symbols-outlined text-4xl">payments</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Pay on Success</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">You keep the bulk of the recovered funds. We only take a small commission from what you save.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<div class="bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-200 dark:border-slate-700 shadow-sm">
+<h3 class="text-2xl font-bold mb-8 text-slate-900 dark:text-white flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+                    Success Commission Table
+                </h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-900 rounded-xl">
+<span class="font-medium">Recovered up to $20</span>
+<span class="text-xl font-bold text-primary">35%</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-900 rounded-xl">
+<span class="font-medium">Recovered $21 — $100</span>
+<span class="text-xl font-bold text-primary">25%</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border-2 border-primary/20">
+<span class="font-medium">Recovered $101 — $500</span>
+<span class="text-xl font-bold text-primary">15%</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-900 rounded-xl">
+<span class="font-medium">Recovered $500+</span>
+<span class="text-xl font-bold text-primary">5%</span>
+</div>
+</div>
+<p class="mt-6 text-xs text-slate-500 text-center italic">Example: If we save you $1000, you keep $950.</p>
+</div>
+<div class="space-y-8">
+<div class="p-8 rounded-3xl bg-slate-900 text-white relative overflow-hidden shadow-2xl">
+<div class="absolute -right-12 -bottom-12 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<h4 class="text-sm font-bold mb-8 uppercase tracking-widest text-primary">Real-World Example</h4>
+<div class="flex flex-col gap-8">
+<div class="flex items-center justify-between border-b border-white/10 pb-6">
+<div>
+<p class="text-slate-400 text-sm mb-1">We recover</p>
+<p class="text-5xl font-black text-white">$80.00</p>
+</div>
+<div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-green-400">add_shopping_cart</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border-2 border-primary/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">trending_flat</span>
+</div>
+<div>
+<p class="text-slate-400 text-sm">Our Fee (25%)</p>
+<p class="text-xl font-bold text-white">$12.00</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-bold text-sm mb-1">YOU KEEP</p>
+<p class="text-5xl font-black text-green-400 leading-none">$68.00</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">no_accounts</span>
+</div>
+<div>
+<p class="font-bold text-xs uppercase tracking-wider text-slate-500">Privacy</p>
+<p class="text-sm font-semibold">No bank connection</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="w-10 h-10 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+<div>
+<p class="font-bold text-xs uppercase tracking-wider text-slate-500">Fairness</p>
+<p class="text-sm font-semibold">Pay only on success</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 text-center">
+<button class="px-12 py-5 bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/30 hover:scale-[1.02] transition-all text-xl">
+                Track My Subscriptions Free
+            </button>
+<p class="mt-6 text-slate-500 text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-base">lock</span>
+                No credit card required to start tracking
+            </p>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark overflow-hidden" id="privacy">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6">
+<span class="material-symbols-outlined text-sm">no_encryption</span>
+                    Zero Login Architecture
+                </div>
+<h2 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">Your Privacy is <br/><span class="text-primary">Non-Negotiable</span></h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                    Most tools ask for your bank login. We don't. Our technology works by scanning your digital receipts or manual statement uploads. You maintain 100% control over your financial credentials.
+                </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+<span><strong>No bank connection required</strong> - No login sharing</span>
+</li>
+<li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+<span>Zero-knowledge encryption for all data</span>
+</li>
+<li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+<span>GDPR &amp; CCPA compliant infrastructure</span>
+</li>
+</ul>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="absolute inset-0 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<p class="font-bold text-slate-900 dark:text-white">Privacy Guard Active</p>
+<p class="text-xs text-slate-500">No external logins connected</p>
+</div>
+</div>
+<div class="px-3 py-1 rounded bg-slate-100 dark:bg-slate-800 text-xs font-mono">ENCRYPTED</div>
+</div>
+<div class="space-y-3">
+<div class="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded"></div>
+<div class="h-4 w-5/6 bg-slate-100 dark:bg-slate-800 rounded"></div>
+<div class="h-4 w-4/6 bg-slate-100 dark:bg-slate-800 rounded"></div>
+</div>
+<div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 flex justify-center">
+<span class="material-symbols-outlined text-6xl text-slate-300">fingerprint</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-12">
+<div class="col-span-2 lg:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-xl">account_balance_wallet</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">SubReminder</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-xs mb-6">
+                    The ultimate success-based subscription recovery tool. Stop paying for what you don't use.
+                </p>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-slate-900 dark:text-white uppercase text-xs tracking-widest">Product</h4>
+<ul class="space-y-4 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">How it Works</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pricing Model</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-slate-900 dark:text-white uppercase text-xs tracking-widest">Trust</h4>
+<ul class="space-y-4 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Security</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-slate-900 dark:text-white uppercase text-xs tracking-widest">Support</h4>
+<ul class="space-y-4 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-slate-500">© 2024 SubReminder Inc. All rights reserved.</p>
+<div class="flex gap-8">
+<span class="text-sm text-slate-500 flex items-center gap-1">
+<span class="material-icons text-xs">lock</span> SSL Secured
+                </span>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Refund History &amp; Status Tracker</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b6cee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Side Navigation -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark hidden md:flex flex-col">
+<div class="p-6 flex flex-col gap-8 h-full">
+<!-- Logo/Brand -->
+<div class="flex items-center gap-3">
+<div class="bg-primary size-10 rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-white text-base font-bold leading-none">Refund Tracker</h1>
+<p class="text-slate-500 text-xs font-normal">Success-based model</p>
+</div>
+</div>
+<!-- Nav Links -->
+<nav class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="text-sm font-medium">Subscriptions</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">history</span>
+<span class="text-sm font-medium">Refund History</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">trending_up</span>
+<span class="text-sm font-medium">Insights</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<!-- Profile Mini -->
+<div class="pt-6 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 px-2">
+<div class="size-9 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden bg-cover bg-center" data-alt="User profile avatar portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAjkTQoIlrl4LzZRp2XjmBxAEYHDCyPrHGd6tflIw-P7k0sqf269SLgJEfFI5REoR-pibKW-hoQeOhfOKTQCnZ6vhD65mLfdZF9z0frZvk5bppRdqywRvxuWqEXLmlVaqFjXL62O4RZ0uDqjQ8K52fBky3tm5jf1rjnzogBUBjl5pTszfzfjoqIGRis2-U9AT7pCBiwkveTsWVjCfltHVGNKOVWS4s3e-f-uw6q9ghNA53c2082zP8GHMeAaUJgkVIHk96U3M_xMff')"></div>
+<div class="flex flex-col overflow-hidden">
+<span class="text-sm font-semibold truncate">Alex Rivera</span>
+<span class="text-xs text-slate-500 truncate">Pro Member</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Top Navigation -->
+<header class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-8 flex items-center justify-between z-10">
+<div class="flex items-center gap-4">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Refund History</h2>
+</div>
+<div class="flex items-center gap-4 flex-1 max-w-md mx-8">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary text-slate-900 dark:text-white placeholder-slate-500" placeholder="Search service, status or amount..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="size-10 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span>
+                        New Request
+                    </button>
+</div>
+</header>
+<!-- Content Scrollable -->
+<div class="flex-1 overflow-y-auto p-8 space-y-8">
+<!-- Stats Overview -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Refunded</p>
+<span class="p-1.5 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+</span>
+</div>
+<p class="text-3xl font-bold text-slate-900 dark:text-white">$1,240.00</p>
+<p class="text-xs text-green-600 dark:text-green-400 font-medium">+12% from last month</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Pending Amount</p>
+<span class="p-1.5 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-base">schedule</span>
+</span>
+</div>
+<p class="text-3xl font-bold text-slate-900 dark:text-white">$320.50</p>
+<p class="text-xs text-slate-500 font-medium">4 active requests</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Commission Paid</p>
+<span class="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+</span>
+</div>
+<p class="text-3xl font-bold text-slate-900 dark:text-white">$124.00</p>
+<p class="text-xs text-slate-500 font-medium">10% avg. platform fee</p>
+</div>
+</div>
+<!-- Table Section -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<h3 class="font-bold text-slate-900 dark:text-white">Transaction Log</h3>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-sm">filter_list</span> Filter
+                            </button>
+<button class="flex items-center gap-2 px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-sm">download</span> Export
+                            </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50">
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Service</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 text-center">Type</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Status</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 text-right">Est. Refund</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 text-center">Comm. %</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white text-right font-bold">You Kept</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+<!-- Row 1 -->
+<tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/30 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-red-100 dark:bg-red-900/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-red-600 dark:text-red-400">play_circle</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Netflix</p>
+<p class="text-xs text-slate-500">Premium Plan</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">Refund</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2 text-green-600 dark:text-green-400 text-sm font-semibold">
+<span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+                                            Approved
+                                        </div>
+</td>
+<td class="px-6 py-5 text-right font-medium text-slate-500 dark:text-slate-400 text-sm">$15.99</td>
+<td class="px-6 py-5 text-center text-slate-500 dark:text-slate-400 text-sm">10%</td>
+<td class="px-6 py-5 text-right font-bold text-slate-900 dark:text-white text-sm">$14.39</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/30 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400">brush</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Adobe Creative Cloud</p>
+<p class="text-xs text-slate-500">Individual Membership</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">Cancel</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2 text-primary text-sm font-semibold">
+<span class="material-symbols-outlined text-base">hourglass_empty</span>
+                                            Waiting
+                                        </div>
+</td>
+<td class="px-6 py-5 text-right font-medium text-slate-500 dark:text-slate-400 text-sm">$52.99</td>
+<td class="px-6 py-5 text-center text-slate-500 dark:text-slate-400 text-sm">10%</td>
+<td class="px-6 py-5 text-right font-bold text-slate-900 dark:text-white text-sm">$47.69</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/30 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-green-100 dark:bg-green-900/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400">music_note</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Spotify</p>
+<p class="text-xs text-slate-500">Family Account</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">Refund</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm font-semibold">
+<span class="material-symbols-outlined text-base">forward_to_inbox</span>
+                                            Sent
+                                        </div>
+</td>
+<td class="px-6 py-5 text-right font-medium text-slate-500 dark:text-slate-400 text-sm">$9.99</td>
+<td class="px-6 py-5 text-center text-slate-500 dark:text-slate-400 text-sm">10%</td>
+<td class="px-6 py-5 text-right font-bold text-slate-900 dark:text-white text-sm">$8.99</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/30 transition-colors group border-b-0">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-orange-100 dark:bg-orange-900/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600 dark:text-orange-400">live_tv</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Hulu</p>
+<p class="text-xs text-slate-500">With Ads Plan</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">Refund</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2 text-red-600 dark:text-red-400 text-sm font-semibold">
+<span class="material-symbols-outlined text-base">cancel</span>
+                                            Denied
+                                        </div>
+</td>
+<td class="px-6 py-5 text-right font-medium text-slate-500 dark:text-slate-400 text-sm">$12.99</td>
+<td class="px-6 py-5 text-center text-slate-500 dark:text-slate-400 text-sm">0%</td>
+<td class="px-6 py-5 text-right font-bold text-slate-900 dark:text-white text-sm">$0.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<p class="text-xs text-slate-500 font-medium">Showing 1 to 4 of 28 transactions</p>
+<div class="flex gap-1">
+<button class="size-8 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded-lg bg-primary text-white text-xs font-bold">1</button>
+<button class="size-8 flex items-center justify-center rounded-lg text-slate-600 dark:text-slate-400 text-xs font-medium hover:bg-slate-100 dark:hover:bg-slate-800">2</button>
+<button class="size-8 flex items-center justify-center rounded-lg text-slate-600 dark:text-slate-400 text-xs font-medium hover:bg-slate-100 dark:hover:bg-slate-800">3</button>
+<button class="size-8 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer Banner -->
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-6 border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4 text-center sm:text-left">
+<div class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Our Success Guarantee</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">We only charge a commission when we successfully recover your money. No refund, no fee.</p>
+</div>
+</div>
+<a class="text-primary text-sm font-bold hover:underline flex items-center gap-1" href="#">
+                        Learn more about fees <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</main>
+</div>
+</body></html>

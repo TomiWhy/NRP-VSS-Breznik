@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cancellation &amp; Refund Assistant | SubTrack</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#2b6cee",
+                "background-light": "#f6f6f8",
+                "background-dark": "#101622",
+                "success": "#10b981",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d121b] dark:text-[#f8f9fc] transition-colors duration-200">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7ebf3] dark:border-b-[#2a3447] px-4 md:px-10 py-3 bg-white dark:bg-[#1a2133]">
+<div class="flex items-center gap-4 text-[#0d121b] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V44Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">SubTrack</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Subscriptions</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors text-primary" href="#">Analytics</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Support</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-[#e7ebf3] dark:border-[#2a3447]" data-alt="User profile avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9ggfQCizqKI-v2pl9--4fnTYBcrUiVDYIc5vSfki9NW2Axg_ojJm5uUDgfN__NADM42ITe9tejc4Ch7eKk7vICK_gSl3_QJv282iODa-b0SK8uE3y1mbyk8pbkXC7D-QPtLeqSuAuMZHhV1YPsJzJKG48f5HBXA3aHvgnfBrCONddAKbZXrapEcdGBPxroJxUa-fu6erWM5q-cdpagfxFlZRlsup2k1_3qHo4475yJLkd9RR3xFLU17Dsc76Oq0nxzniBGk7ZqbPs");'></div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 py-8">
+<div class="flex flex-wrap justify-between items-end gap-4 mb-8">
+<div class="flex min-w-72 flex-col gap-2">
+<h1 class="text-[#0d121b] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Refund Assistant</h1>
+<p class="text-[#4c669a] dark:text-[#a1b2d1] text-lg font-normal leading-normal">Recovering your unused subscription fees automatically.</p>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-[#e7ebf3] dark:bg-[#2a3447] text-[#0d121b] dark:text-white text-sm font-bold leading-normal transition-all hover:bg-[#d9dee9]">
+<span class="material-symbols-outlined mr-2 text-lg">arrow_back</span>
+<span class="truncate">Back to Dashboard</span>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+<div class="lg:col-span-2 flex flex-col gap-8">
+<div class="bg-white dark:bg-[#1a2133] rounded-xl shadow-sm border border-[#e7ebf3] dark:border-[#2a3447] overflow-hidden">
+<div class="bg-[#f8f9fc] dark:bg-[#212a3e] px-6 py-4 border-b border-[#e7ebf3] dark:border-[#2a3447] flex justify-between items-center">
+<h2 class="text-[#0d121b] dark:text-white text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">receipt_long</span>
+                        Subscription Details &amp; Refund Request
+                    </h2>
+</div>
+<div class="p-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+<div>
+<p class="text-xs font-semibold text-[#4c669a] dark:text-[#a1b2d1] uppercase tracking-wider mb-1">Plan Name</p>
+<p class="text-base font-bold text-[#0d121b] dark:text-white">Premium Family</p>
+</div>
+<div>
+<p class="text-xs font-semibold text-[#4c669a] dark:text-[#a1b2d1] uppercase tracking-wider mb-1">Price</p>
+<p class="text-base font-bold text-[#0d121b] dark:text-white">$15.99/mo</p>
+</div>
+<div>
+<p class="text-xs font-semibold text-[#4c669a] dark:text-[#a1b2d1] uppercase tracking-wider mb-1">Annual Cost</p>
+<p class="text-base font-bold text-[#0d121b] dark:text-white">$191.88</p>
+</div>
+<div>
+<p class="text-xs font-semibold text-[#4c669a] dark:text-[#a1b2d1] uppercase tracking-wider mb-1">Usage Frequency</p>
+<div class="flex items-center gap-2">
+<span class="text-base font-bold text-[#0d121b] dark:text-white">Low</span>
+<span class="flex h-2 w-8 bg-orange-100 rounded-full overflow-hidden">
+<span class="bg-orange-400 w-1/3 h-full"></span>
+</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-primary/5 dark:bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8">
+<span class="material-symbols-outlined text-primary text-xl">info</span>
+<p class="text-sm font-medium text-primary leading-tight">
+                            Refund assistance is success-based. No fee if not successful.
+                        </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex-1 flex items-center justify-center gap-2 h-11 px-6 rounded-lg bg-red-50 text-red-600 border border-red-100 font-bold text-sm hover:bg-red-100 transition-colors">
+<span class="material-symbols-outlined text-lg">cancel</span>
+                            Cancel Subscription
+                        </button>
+<button class="flex-1 flex items-center justify-center gap-2 h-11 px-6 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all">
+<span class="material-symbols-outlined text-lg">payments</span>
+                            Request Refund
+                        </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2133] rounded-xl shadow-sm border border-[#e7ebf3] dark:border-[#2a3447] overflow-hidden">
+<div class="bg-[#f8f9fc] dark:bg-[#212a3e] px-6 py-4 border-b border-[#e7ebf3] dark:border-[#2a3447] flex justify-between items-center">
+<h2 class="text-[#0d121b] dark:text-white text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">mail</span>
+                        Email Message Preview
+                    </h2>
+<span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded uppercase tracking-wider">Draft Template</span>
+</div>
+<div class="p-6">
+<div class="space-y-4">
+<div class="flex border-b border-[#e7ebf3] dark:border-[#2a3447] pb-2">
+<span class="w-16 text-sm font-medium text-[#4c669a] dark:text-[#a1b2d1]">To:</span>
+<span class="text-sm font-semibold">billing-support@provider.com</span>
+</div>
+<div class="flex border-b border-[#e7ebf3] dark:border-[#2a3447] pb-2">
+<span class="w-16 text-sm font-medium text-[#4c669a] dark:text-[#a1b2d1]">Subject:</span>
+<span class="text-sm font-semibold">Formal Subscription Cancellation &amp; Refund Request - [Account ID: #7742]</span>
+</div>
+<div class="pt-4">
+<div class="bg-background-light dark:bg-[#101622] p-6 rounded-lg border border-dashed border-[#cfd7e7] dark:border-[#2a3447] text-sm leading-relaxed text-[#0d121b] dark:text-[#f8f9fc]">
+<p class="mb-4">To whom it may concern,</p>
+<p class="mb-4">
+                                    I am writing to formally request the immediate cancellation of my <span class="bg-primary/10 text-primary px-1 font-medium rounded">Premium Family</span> subscription associated with this email address.
+                                </p>
+<p class="mb-4">
+                                    As the service has not been utilized during the most recent billing cycle, I am also requesting a full refund of <span class="bg-primary/10 text-primary px-1 font-medium rounded">$15.99</span> charged on October 1st.
+                                </p>
+<p class="mb-4">
+                                    Please confirm once the cancellation has been processed and the refund has been initiated to my original payment method.
+                                </p>
+<p>Best regards,<br/>Alex Johnson</p>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-3">
+<button class="px-4 py-2 text-sm font-bold text-[#4c669a] dark:text-[#a1b2d1] hover:text-primary transition-colors">Edit Template</button>
+<button class="px-6 py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary/90 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">send</span>
+                            Resend Request
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1 flex flex-col gap-6">
+<div class="flex flex-col gap-4 rounded-xl border border-success/30 bg-success/5 dark:bg-success/10 p-5">
+<div class="flex gap-4 items-center">
+<div class="flex size-10 items-center justify-center rounded-full bg-success text-white shrink-0">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<div class="flex flex-col">
+<p class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight">You got $15.99 back!</p>
+<p class="text-[#4c669a] dark:text-[#a1b2d1] text-xs font-normal leading-tight mt-1">Netflix Premium refund approved.</p>
+</div>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-9 bg-primary text-white text-xs font-bold transition-all">
+                    View Receipt
+                </button>
+</div>
+<div class="bg-white dark:bg-[#1a2133] rounded-xl shadow-sm border border-[#e7ebf3] dark:border-[#2a3447] p-6">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                    Request Status
+                </h3>
+<div class="grid grid-cols-[40px_1fr] gap-x-2">
+<div class="flex flex-col items-center gap-1 pt-3">
+<div class="text-success">
+<span class="material-symbols-outlined font-bold">check_circle</span>
+</div>
+<div class="w-[2px] bg-success h-8 grow"></div>
+</div>
+<div class="flex flex-1 flex-col py-3">
+<p class="text-[#0d121b] dark:text-white text-base font-bold leading-tight">Draft Sent</p>
+<p class="text-[#4c669a] dark:text-[#a1b2d1] text-sm font-normal leading-normal">Oct 12, 10:02 AM</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-[2px] bg-success h-2"></div>
+<div class="text-success">
+<span class="material-symbols-outlined font-bold">check_circle</span>
+</div>
+<div class="w-[2px] bg-success h-8 grow"></div>
+</div>
+<div class="flex flex-1 flex-col py-3">
+<p class="text-[#0d121b] dark:text-white text-base font-bold leading-tight">Provider Received</p>
+<p class="text-[#4c669a] dark:text-[#a1b2d1] text-sm font-normal leading-normal">Oct 12, 10:15 AM</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-[2px] bg-success h-2"></div>
+<div class="text-primary">
+<span class="material-symbols-outlined font-bold">schedule</span>
+</div>
+<div class="w-[2px] bg-[#cfd7e7] dark:bg-[#2a3447] h-8 grow"></div>
+</div>
+<div class="flex flex-1 flex-col py-3">
+<p class="text-[#0d121b] dark:text-white text-base font-bold leading-tight">Waiting for Provider</p>
+<p class="text-[#4c669a] dark:text-[#a1b2d1] text-sm font-normal leading-normal">Awaiting confirmation</p>
+</div>
+<div class="flex flex-col items-center gap-1 pb-3">
+<div class="w-[2px] bg-[#cfd7e7] dark:bg-[#2a3447] h-2"></div>
+<div class="text-[#cfd7e7] dark:text-[#2a3447]">
+<span class="material-symbols-outlined font-bold">verified</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col py-3">
+<p class="text-[#4c669a] dark:text-[#a1b2d1] text-base font-medium leading-normal">Refund Approved</p>
+<p class="text-[#4c669a]/60 dark:text-[#a1b2d1]/60 text-sm font-normal leading-normal">Expected in 3-5 days</p>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-[#e7ebf3] dark:border-[#2a3447]">
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm font-medium text-[#4c669a] dark:text-[#a1b2d1]">Support Case ID</span>
+<span class="text-sm font-mono font-bold">#ST-99201-NX</span>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-10 border border-primary text-primary text-sm font-bold hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-sm">contact_support</span>
+                        Contact Human Agent
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<p class="text-[#4c669a] dark:text-[#a1b2d1] text-sm">
+            SubTrack has helped you recover <span class="font-bold text-success">$142.50</span> this year.
+        </p>
+<div class="mt-4 flex justify-center gap-4 grayscale opacity-60">
+<div class="h-6 w-20 bg-no-repeat bg-contain" data-alt="Stripe logo placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9RfRF4oENYIZStFcundLXQoUtBebSGrfvKP_ULSbZGCsD3HDwf2rvXJkt9sjbzDwFSjJBELbCX008y0BuXQKG1BhNy7pDwDh-ABHcRtpuUqT6PnLjf_jbQhMmDX4txZGfyXSErWmrj8XOyd8yYYcfSX5GnLEZbJkrfvxUavXHdTrhgeSQ65cnsw2QwBJDwuzA4h9djp60NP_3pogbb_oozYPc0nZtp2y9fA0mLq05f0zdid90fvPgnUrarY9d5L84yqfEu3Fkzvpu");'></div>
+<div class="h-6 w-20 bg-no-repeat bg-contain" data-alt="Norton Secured logo placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAEnIJSb4UcbZNjtotXKphRObynSPGFYG66x343tu5VdBfu-fcX3NdwX99ybdZO8pJAOWvTR7-ffMJDx5If3LOVRjNMquMgujZZQM9H0vgQ7W17WbOw9NZWFvklEFkSLm-f6UpngxBK5xFCBrHyG7BcriJWlWie00J6zaHlzjsUdQoY4wyjEzXowQiV591S9r19Ytf_ZKoxSiJ1KVNThFxyfrrEfyVkLwPdREsw_T6gRr3pOExmP26BnXtDeL1vSgTnCE2yUV625xWR");'></div>
+</div>
+</div>
+</main>
+
+</body></html>

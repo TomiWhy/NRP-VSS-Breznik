@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SubReminder Dashboard - Success Model</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b6cee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-slate-100 font-display">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_330)">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">SubReminder</h2>
+</div>
+<label class="flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-slate-400 flex border-none bg-slate-100 dark:bg-slate-800 items-center justify-center pl-4 rounded-l-lg" data-icon="MagnifyingGlass">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-slate-100 dark:bg-slate-800 focus:border-none h-full placeholder:text-slate-400 px-4 rounded-l-none pl-2 text-sm font-normal leading-normal" placeholder="Search subscriptions..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<div class="flex gap-2">
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200 dark:border-slate-700" data-alt="User profile avatar portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCO8RETBL2UNaXtOGOKXM3skAWUK0-WBx7NCFmzLScRUWGrJseCTQ_4Ur5ZAu0glpgSBgD8SAQaW6rwz-urLK0iGqxBju_SJ7aCTHI5RvL3a44nTzDqtFjgctLUIPYHvdIeJF0AT4EDGXGor0Frl-faq7s9HP9Ys56zTr1EzJ0YPB3oMyu8d_gnLKaeqB_JFbU0DEjX070k1xaQ6nf0vQ_olmBSpNG10k2SsdylegECkDl_VXkVtuTOp2JtL1irFAhTluWNpEoiCxnb");'></div>
+<div class="hidden lg:block">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Alex Morgan</p>
+<div class="flex items-center gap-1">
+<span class="size-1.5 rounded-full bg-emerald-500"></span>
+<p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Dashboard Active</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex h-full grow">
+<div class="flex-1 px-8 py-6 overflow-y-auto">
+<div class="flex flex-wrap justify-between items-end gap-3 mb-6">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<p class="text-slate-900 dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">Dashboard</p>
+<span class="inline-flex items-center gap-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-3 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                        SUCCESS MODEL ACTIVE
+                    </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal">Track all your subscriptions for free. We only charge if we save you money.</p>
+</div>
+<button class="flex h-10 items-center justify-center rounded-lg bg-primary px-4 text-sm font-bold text-white gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                Add New Subscription
+            </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Monthly Spend</p>
+<span class="material-symbols-outlined text-slate-400">payments</span>
+</div>
+<p class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">$145.50</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-slate-400 text-[16px]">info</span>
+<p class="text-slate-500 text-xs font-medium">Tracking 12 services</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Upcoming Renewals</p>
+<span class="material-symbols-outlined text-orange-500">event_repeat</span>
+</div>
+<p class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">3 in 7 days</p>
+<p class="text-slate-400 text-xs">Next: Streaming A (Oct 24)</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-900/30 shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<p class="text-emerald-700 dark:text-emerald-400 text-sm font-bold">Money Recovered So Far</p>
+<span class="material-symbols-outlined text-emerald-500">account_balance_wallet</span>
+</div>
+<p class="text-emerald-800 dark:text-emerald-300 tracking-tight text-3xl font-bold leading-tight">$412.30</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-emerald-600 text-[16px]">verified</span>
+<p class="text-emerald-600 dark:text-emerald-500 text-xs font-semibold">Success-based savings</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-primary/10 dark:bg-primary/20 border border-primary/20 shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<p class="text-primary dark:text-blue-400 text-sm font-bold">Potential Savings Found</p>
+<span class="material-symbols-outlined text-primary">savings</span>
+</div>
+<p class="text-primary dark:text-blue-400 tracking-tight text-3xl font-bold leading-tight">$24.99</p>
+<p class="text-primary/70 dark:text-blue-400/70 text-xs font-medium">Optimizations identified</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+<div class="flex items-center justify-between px-6 py-5 border-b border-slate-100 dark:border-slate-700">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold">Your Subscriptions</h2>
+<div class="flex gap-2">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<div class="@container">
+<div class="flex overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-900/50">
+<th class="px-6 py-3 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Service</th>
+<th class="px-6 py-3 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Category</th>
+<th class="px-6 py-3 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Price</th>
+<th class="px-6 py-3 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Renewal Date</th>
+<th class="px-6 py-3 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Status</th>
+<th class="px-6 py-3 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-700">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-red-100 flex items-center justify-center text-red-600">
+<span class="material-symbols-outlined text-[18px]">movie</span>
+</div>
+<span class="text-slate-900 dark:text-white font-medium">Premium Streaming</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2.5 py-0.5 text-xs font-medium text-slate-700 dark:text-slate-300">Entertainment</span>
+</td>
+<td class="px-6 py-4 text-slate-700 dark:text-slate-300 text-sm">$15.49/mo</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400 text-sm">Oct 24, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2.5 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5"></span>
+                                    Active
+                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2 items-center">
+<div class="flex gap-2 items-center opacity-100 transition-opacity">
+<button class="text-slate-400 hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+<button class="text-slate-400 hover:text-red-500 p-1"><span class="material-symbols-outlined text-[20px]">cancel</span></button>
+</div>
+</div>
+</td>
+</tr>
+<tr class="bg-primary/5 dark:bg-primary/10 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors group border-l-4 border-l-primary">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-emerald-100 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined text-[18px]">music_note</span>
+</div>
+<span class="text-slate-900 dark:text-white font-bold">Audio Platform B</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2.5 py-0.5 text-xs font-medium text-slate-700 dark:text-slate-300">Music</span>
+</td>
+<td class="px-6 py-4 text-slate-700 dark:text-slate-300 text-sm">$10.99/mo</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400 text-sm">Oct 28, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-amber-100 dark:bg-amber-900/30 px-2.5 py-0.5 text-xs font-medium text-amber-700 dark:text-amber-400">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5"></span>
+                                    Low Usage
+                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end items-center gap-3">
+<div class="flex flex-col items-end">
+<span class="flex items-center gap-1 text-[9px] font-extrabold text-emerald-600 bg-emerald-100 px-2 py-0.5 rounded-full border border-emerald-200 uppercase tracking-tight">
+                                            Refund help = pay only if successful
+                                        </span>
+</div>
+<div class="flex gap-2">
+<button class="text-primary hover:text-primary p-1" title="Refund Action"><span class="material-symbols-outlined text-[20px]">request_quote</span></button>
+<button class="text-slate-400 hover:text-red-500 p-1"><span class="material-symbols-outlined text-[20px]">history_edu</span></button>
+</div>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-blue-100 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined text-[18px]">brush</span>
+</div>
+<span class="text-slate-900 dark:text-white font-medium">Design Suite C</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-700 px-2.5 py-0.5 text-xs font-medium text-slate-700 dark:text-slate-300">Design</span>
+</td>
+<td class="px-6 py-4 text-slate-700 dark:text-slate-300 text-sm">$54.99/mo</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400 text-sm">Nov 02, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2.5 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5"></span>
+                                    Active
+                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2 items-center">
+<div class="flex gap-2 items-center opacity-100 transition-opacity">
+<button class="text-slate-400 hover:text-primary p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+<button class="text-slate-400 hover:text-red-500 p-1"><span class="material-symbols-outlined text-[20px]">cancel</span></button>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="px-6 py-4 border-t border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-900/20 text-center">
+<button class="text-sm font-semibold text-primary hover:underline">View All 12 Subscriptions</button>
+</div>
+</div>
+</div>
+<aside class="w-[380px] bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 flex flex-col hidden xl:flex">
+<div class="p-6 border-b border-slate-100 dark:border-slate-700">
+<div class="flex justify-between items-start mb-4">
+<div class="w-16 h-16 rounded-xl bg-emerald-500 flex items-center justify-center text-white text-3xl font-bold">
+<span class="material-symbols-outlined text-4xl">music_note</span>
+</div>
+<button class="p-2 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<h3 class="text-2xl font-black text-slate-900 dark:text-white">Audio Platform B</h3>
+<p class="text-slate-500 text-sm mb-4">Unlimited Plan • Music &amp; Podcasts</p>
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="inline-flex items-center rounded-full bg-amber-100 dark:bg-amber-900/30 px-2.5 py-1 text-xs font-bold text-amber-700 dark:text-amber-400">
+                    LOW USAGE
+                </span>
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                    FEATURES UNLOCKED
+                </span>
+</div>
+</div>
+<div class="flex-1 p-6 space-y-8 overflow-y-auto">
+<section>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-wider">Usage Frequency</h4>
+<div class="flex items-end justify-between h-32 gap-1 px-2">
+<div class="w-full bg-primary/20 rounded-t h-4/5 relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">Mon</div>
+</div>
+<div class="w-full bg-primary/20 rounded-t h-2/5"></div>
+<div class="w-full bg-primary/20 rounded-t h-1/5"></div>
+<div class="w-full bg-primary/20 rounded-t h-3/5"></div>
+<div class="w-full bg-primary/40 rounded-t h-2/5"></div>
+<div class="w-full bg-primary/10 rounded-t h-1/5"></div>
+<div class="w-full bg-primary/20 rounded-t h-4/5"></div>
+</div>
+<div class="flex justify-between mt-2 px-1">
+<span class="text-[10px] text-slate-400 font-medium">Week 1</span>
+<span class="text-[10px] text-slate-400 font-medium">Week 4</span>
+</div>
+<p class="mt-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    You've used this platform <span class="text-primary font-bold">4 times</span> this month. That's <span class="text-slate-900 font-bold">60% less</span> than average.
+                </p>
+</section>
+<section class="space-y-3">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-wider">Billing Detail</h4>
+<div class="flex justify-between py-2 border-b border-slate-50 dark:border-slate-700">
+<span class="text-sm text-slate-500">Subscription Cost</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">$10.99/mo</span>
+</div>
+<div class="flex justify-between py-2 border-b border-slate-50 dark:border-slate-700">
+<span class="text-sm text-slate-500">Last Charged</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">Sep 28, 2023</span>
+</div>
+<div class="flex justify-between py-2">
+<span class="text-sm text-slate-500">Annual Cost</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">$131.88</span>
+</div>
+</section>
+<div class="p-4 bg-emerald-50 dark:bg-emerald-900/10 rounded-xl border border-emerald-100 dark:border-emerald-900/20">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-emerald-600">auto_fix_high</span>
+<div>
+<p class="text-sm font-bold text-emerald-700 dark:text-emerald-400">Refund Opportunity Found</p>
+<p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Potential <span class="font-bold text-slate-900 dark:text-white">$4.50 refund</span> available for unused time. </p>
+<div class="mt-2 inline-flex items-center gap-1.5 text-[9px] font-extrabold text-emerald-600 dark:text-emerald-500 uppercase tracking-tight">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                            Refund help = pay only if successful
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 border-t border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-900/30">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-primary/20 mb-3 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">request_quote</span>
+                Request $4.50 Refund
+            </button>
+<p class="text-[10px] text-center text-slate-500 mb-2 uppercase font-bold tracking-tight">Zero upfront cost • 20% success fee only</p>
+<button class="w-full text-slate-500 hover:text-red-500 font-medium py-2 text-sm transition-colors">
+                Cancel Subscription
+            </button>
+</div>
+</aside>
+</main>
+
+</body></html>
