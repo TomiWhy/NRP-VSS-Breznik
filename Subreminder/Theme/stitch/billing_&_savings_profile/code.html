@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Billing &amp; Savings Profile | SubReminder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b6cee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d121b] dark:text-white antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#cfd7e7] dark:border-[#2d3748] bg-white dark:bg-background-dark px-6 md:px-20 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#0d121b] dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_330)">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">SubReminder</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#0d121b] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-[#0d121b] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Subscriptions</a>
+<a class="text-[#0d121b] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Refunds</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Settings</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-gray-200" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCA6Rr5OJxiFiz_0E7zfz6DIW-ULFnRCBM3K2cwLyNGHm4kuibI047CgaCjw_ffeCB8126hVLq9GMYVQCAVoz3T0GXUWaW5svE7wa9U5Vftop5_sKCAjHk-eVrD-QXiiyrB-A4nSmJTkdvh7V1YqHv90kXkk2_udVkPqkB4jDvzQ40KIEHVbuyMAxr0wg408LV00m7bFhtlP8Fv4urHPICR2haSO4j3k7KXpMx7-WbSqcxgN4O1j_oglKAeeBGNuM3SgDVpl7wZp2kt");'></div>
+</div>
+</header>
+<main class="flex-1 flex justify-center py-8 px-4 md:px-20">
+<div class="layout-content-container flex flex-col md:flex-row max-w-[1200px] flex-1 gap-8">
+<aside class="w-full md:w-64 flex flex-col gap-1">
+<div class="flex flex-col mb-4 px-3">
+<h1 class="text-[#0d121b] dark:text-white text-base font-bold leading-normal">Settings</h1>
+<p class="text-[#4c669a] dark:text-gray-400 text-xs font-normal leading-normal">Account &amp; Preferences</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-500">person</span>
+<p class="text-[#0d121b] dark:text-white text-sm font-medium leading-normal">General</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary text-white" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<p class="text-sm font-medium leading-normal">Billing &amp; Savings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-500">security</span>
+<p class="text-[#0d121b] dark:text-white text-sm font-medium leading-normal">Security</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-gray-500">notifications</span>
+<p class="text-[#0d121b] dark:text-white text-sm font-medium leading-normal">Notifications</p>
+</a>
+</nav>
+</aside>
+<div class="flex-1 flex flex-col gap-6">
+<div class="flex flex-wrap justify-between gap-3">
+<div class="flex flex-col gap-1">
+<p class="text-[#0d121b] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">Billing Model</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-base font-normal leading-normal">How your performance-based savings work at SubReminder.</p>
+</div>
+</div>
+<div class="@container">
+<div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-xl border border-primary/20 bg-primary/5 p-6 @[480px]:flex-row @[480px]:items-center">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-xl">account_balance_wallet</span>
+<p class="text-[#0d121b] dark:text-white text-base font-bold leading-tight">No upfront subscription costs</p>
+</div>
+<p class="text-[#4c669a] dark:text-gray-300 text-sm font-normal leading-normal">
+                                        You are not subscribed to any paid plan. SubReminder only charges a commission after successful refunds. If we don't save you money, you don't pay.
+                                    </p>
+</div>
+<a class="text-sm font-bold leading-normal tracking-[0.015em] flex items-center gap-2 text-primary hover:underline whitespace-nowrap" href="#">
+                                    View Pricing Details
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-[#cfd7e7] dark:border-[#2d3748] bg-white dark:bg-background-dark shadow-sm">
+<div class="flex items-center gap-2 text-[#4c669a] dark:text-gray-400 mb-1">
+<span class="material-symbols-outlined text-lg">verified</span>
+<p class="text-sm font-medium leading-normal uppercase tracking-wider">Successful refunds count</p>
+</div>
+<p class="text-[#0d121b] dark:text-white tracking-tight text-3xl font-black leading-tight">12</p>
+<p class="text-xs text-green-600 font-medium">100% success rate</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-[#cfd7e7] dark:border-[#2d3748] bg-white dark:bg-background-dark shadow-sm">
+<div class="flex items-center gap-2 text-[#4c669a] dark:text-gray-400 mb-1">
+<span class="material-symbols-outlined text-lg">payments</span>
+<p class="text-sm font-medium leading-normal uppercase tracking-wider">Total commission paid</p>
+</div>
+<p class="text-[#0d121b] dark:text-white tracking-tight text-3xl font-black leading-tight">$48.00</p>
+<p class="text-xs text-gray-500 font-normal">Fair 20% commission</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary/30 bg-primary/5 shadow-sm">
+<div class="flex items-center gap-2 text-primary mb-1">
+<span class="material-symbols-outlined text-lg">savings</span>
+<p class="text-sm font-bold leading-normal uppercase tracking-wider">Total money saved</p>
+</div>
+<p class="text-primary tracking-tight text-3xl font-black leading-tight">$240.00</p>
+<p class="text-xs text-primary/80 font-medium">Net impact on your budget</p>
+</div>
+</div>
+<div class="rounded-xl border border-[#cfd7e7] dark:border-[#2d3748] bg-white dark:bg-background-dark overflow-hidden">
+<div class="px-6 py-4 border-b border-[#cfd7e7] dark:border-[#2d3748] flex justify-between items-center">
+<h3 class="text-base font-bold text-[#0d121b] dark:text-white">Active Payment Method</h3>
+<button class="text-sm text-primary font-bold hover:underline">Update</button>
+</div>
+<div class="p-6 flex items-center gap-4">
+<div class="bg-gray-100 dark:bg-gray-800 p-3 rounded-lg">
+<span class="material-symbols-outlined text-3xl text-gray-600 dark:text-gray-400">credit_card</span>
+</div>
+<div>
+<p class="text-[#0d121b] dark:text-white font-bold text-sm">Visa ending in 4242</p>
+<p class="text-[#4c669a] dark:text-gray-400 text-xs">Used for commission payments only</p>
+</div>
+<div class="ml-auto">
+<span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Primary</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold text-[#0d121b] dark:text-white px-1">Recent Savings History</h3>
+<div class="rounded-xl border border-[#cfd7e7] dark:border-[#2d3748] bg-white dark:bg-background-dark overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead class="bg-gray-50 dark:bg-gray-800/50">
+<tr>
+<th class="px-6 py-3 text-xs font-bold text-[#4c669a] dark:text-gray-400 uppercase">Service</th>
+<th class="px-6 py-3 text-xs font-bold text-[#4c669a] dark:text-gray-400 uppercase text-right">Refund Amount</th>
+<th class="px-6 py-3 text-xs font-bold text-[#4c669a] dark:text-gray-400 uppercase text-right">Commission</th>
+<th class="px-6 py-3 text-xs font-bold text-[#4c669a] dark:text-gray-400 uppercase text-right">Date</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#cfd7e7] dark:divide-[#2d3748]">
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-red-100 flex items-center justify-center text-red-600 font-bold text-xs">N</div>
+<p class="text-sm font-medium">Streaming Premium</p>
+</div>
+</td>
+<td class="px-6 py-4 text-sm font-bold text-[#0d121b] dark:text-white text-right">$19.99</td>
+<td class="px-6 py-4 text-sm text-[#4c669a] dark:text-gray-400 text-right">$4.00</td>
+<td class="px-6 py-4 text-sm text-[#4c669a] dark:text-gray-400 text-right">Oct 12, 2023</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">D</div>
+<p class="text-sm font-medium">Design Suite</p>
+</div>
+</td>
+<td class="px-6 py-4 text-sm font-bold text-[#0d121b] dark:text-white text-right">$54.99</td>
+<td class="px-6 py-4 text-sm text-[#4c669a] dark:text-gray-400 text-right">$11.00</td>
+<td class="px-6 py-4 text-sm text-[#4c669a] dark:text-gray-400 text-right">Sep 28, 2023</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-green-100 flex items-center justify-center text-green-600 font-bold text-xs">M</div>
+<p class="text-sm font-medium">Music Plan</p>
+</div>
+</td>
+<td class="px-6 py-4 text-sm font-bold text-[#0d121b] dark:text-white text-right">$16.99</td>
+<td class="px-6 py-4 text-sm text-[#4c669a] dark:text-gray-400 text-right">$3.40</td>
+<td class="px-6 py-4 text-sm text-[#4c669a] dark:text-gray-400 text-right">Sep 15, 2023</td>
+</tr>
+</tbody>
+</table>
+<div class="px-6 py-3 bg-gray-50 dark:bg-gray-800/50 text-center border-t border-[#cfd7e7] dark:border-[#2d3748]">
+<button class="text-xs font-bold text-primary hover:underline">View all transactions</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-[#cfd7e7] dark:border-[#2d3748] py-8 flex justify-center mt-12">
+<div class="max-w-[1200px] w-full px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-4 text-[#4c669a] dark:text-gray-400 text-sm">
+<p>© 2023 SubReminder Inc. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id             String          @id @default(cuid())
+  name           String?
+  image          String?
+  email          String          @unique
+  passwordHash       String
+  emailNotifications Boolean         @default(true)
+  appNotifications   Boolean         @default(true)
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+  referralsCount     Int             @default(0)
+  accountLocked      Boolean         @default(false)
+  subscriptions  Subscription[]
+  notifications  Notification[]
+  refundRequests RefundRequest[]
+}
+
+model Subscription {
+  id              String          @id @default(cuid())
+  userId          String
+  user            User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name            String
+  category        String
+  price           Float
+  currency        String
+  billingInterval String          // "monthly" or "yearly"
+  renewalDate     DateTime
+  usageLevel      String          // "high", "medium", "low"
+  status          String          @default("active") // "active" or "cancelled"
+  providerEmail   String
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  refundRequests  RefundRequest[]
+  notifications   Notification[]
+}
+
+model RefundRequest {
+  id              String       @id @default(cuid())
+  userId          String
+  user            User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subscriptionId  String
+  subscription    Subscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+  status          String       @default("pending") // "pending", "approved", "rejected"
+  amountRequested Float
+  reason          String
+  emailDraft      String
+  commissionFee   Float?
+  paidAt          DateTime?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+}
+
+model Notification {
+  id             String       @id @default(cuid())
+  userId         String
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subscriptionId String?
+  subscription   Subscription? @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+  type           String       // "renewal", "refund", "system"
+  message        String
+  read           Boolean      @default(false)
+  createdAt      DateTime     @default(now())
+}
